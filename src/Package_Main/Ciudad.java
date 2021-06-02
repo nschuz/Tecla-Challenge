@@ -2,19 +2,9 @@ package Package_Main;
 import   static  Package_Main.Constantes.*;
 
 public class Ciudad {
+//Atributos
   private String nombre;
-
-  public static String getNombre(int idCiudad) {
-    switch (idCiudad){
-      case 1: return GUADALAJARA.getCiudad();
-      case 2: return TIJUANA.getCiudad();
-      case 3: return CULIACAN.getCiudad();
-      case 4: return TOLUCA.getCiudad();
-      case 5: return MERIDA.getCiudad();
-      default: return "Ciudad invalida";
-    }
-  }
-
+//Constructor
   public Ciudad(int idCiudad){
     switch (idCiudad){
       case 1:
@@ -35,6 +25,17 @@ public class Ciudad {
       default:
         this.nombre = "Ciudad invalida";
         break;
+    }
+  }
+  //Getter
+  public static String getNombre(int idCiudad) {
+    switch (idCiudad){
+      case 1: return GUADALAJARA.getCiudad();
+      case 2: return TIJUANA.getCiudad();
+      case 3: return CULIACAN.getCiudad();
+      case 4: return TOLUCA.getCiudad();
+      case 5: return MERIDA.getCiudad();
+      default: return "Ciudad invalida";
     }
   }
 

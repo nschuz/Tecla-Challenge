@@ -2,6 +2,7 @@ package Package_Main;
 import static  Package_Main.Constantes.*;
 
 public class Alquiler {
+  //Atributos
   private Ciudad ciudad;
   private Vehiculo vehiculo;
   private int cantidadVehiculos;
@@ -12,21 +13,7 @@ public class Alquiler {
   private static int totalToluca = 0;
   private static int totalMerida = 0;
 
-  public Vehiculo getVehiculo(){
-    return this.vehiculo;
-  }
-  public Ciudad getCiudad(){
-    return this.ciudad;
-  }
-
-  public int getCantidadVehiculos() {
-    return cantidadVehiculos;
-  }
-
-  public int getHorasTotales() {
-    return horasTotales;
-  }
-
+  //Constructores
   public Alquiler(int numeroCiudad, int tipoVehiculo, int cantidadVehiculos, int horasTotales){
     this.vehiculo = new Vehiculo(tipoVehiculo,horasTotales, cantidadVehiculos);
     this.ciudad = new Ciudad(numeroCiudad);
@@ -37,10 +24,18 @@ public class Alquiler {
       this.cantidadVehiculos = cantidadVehiculos;
     }
     int costoTotal = setCosto(cantidadVehiculos, tipoVehiculo, horasTotales);
-    setRecaudacion(numeroCiudad,costoTotal);
+    setTotal(numeroCiudad,costoTotal);
+  }
+// Constructor 2
+  public Alquiler(Ciudad ciudad, Vehiculo vehiculo) {
+    this.ciudad = ciudad;
+    this.vehiculo = vehiculo;
   }
 
-  public static void setRecaudacion(int idCiudad, int costoTotal){
+
+
+  //Setters and Getters
+  public static void setTotal(int idCiudad, int costoTotal){
     switch (idCiudad){
       case 1: totalGuadalajara += costoTotal;
         break;
@@ -55,7 +50,7 @@ public class Alquiler {
     }
   }
 
-  public static int getRecaudacion(int idCiudad){
+  public static int getTotal(int idCiudad){
     switch (idCiudad){
       case 1: return totalGuadalajara;
       case 2: return totalTijuana;
@@ -68,16 +63,28 @@ public class Alquiler {
 
   private int setCosto(int cantidadVehiculos, int tipoVehiculo, int horasTotales){
     switch (tipoVehiculo){
-      case 1: //Bici
+      case 1:
         return cantidadVehiculos * BICICLETA.getValor() * horasTotales;
       case 2: //Moto
         return cantidadVehiculos * MOTO.getValor() * horasTotales;
-      case 3: //Cuatri
+      case 3:
         return cantidadVehiculos * CUATRIMOTO.getValor() * horasTotales;
-      case 4: //Golf
+      case 4:
         return cantidadVehiculos * CARRO_GOLF.getValor() * horasTotales;
       default:
         return 0;
     }
+  }
+  public Vehiculo getVehiculo(){
+    return this.vehiculo;
+  }
+  public Ciudad getCiudad(){
+    return this.ciudad;
+  }
+  public int getCantidadVehiculos() {
+    return cantidadVehiculos;
+  }
+  public int getHorasTotales() {
+    return horasTotales;
   }
 }

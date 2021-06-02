@@ -9,41 +9,27 @@ public class Vehiculo {
   private int tiempoRenta;
   private int cantidadVehiculos;
 
-  public int getCosto() {
-    return costo;
-  }
 
-  public String getTipoVehiculo() {
-    return tipoVehiculo;
-  }
-
-  public int getTiempoRenta() {
-    return tiempoRenta;
-  }
-
-  public int getCantidadVehiculos() {
-    return cantidadVehiculos;
-  }
-
+  //Constructor
   public Vehiculo(int tipo, int tiempoRenta, int cantidad){
     this.cantidadVehiculos = cantidad;
     this.tiempoRenta = tiempoRenta;
     switch(tipo){
       case 1:
         this.tipoVehiculo = BICICLETA.getKey();
-        this.costo = 4;
+        this.costo = BICICLETA.getValor();
         break;
-      case 2: //moto 6
+      case 2:
         this.tipoVehiculo = MOTO.getKey();
-        this.costo = 6;
+        this.costo = MOTO.getValor();
         break;
-      case 3: //cuatri 15
+      case 3:
         this.tipoVehiculo = CUATRIMOTO.getKey();
-        this.costo = 15;
+        this.costo = CUATRIMOTO.getValor();
         break;
-      case 4: //carrito golf 18
+      case 4:
         this.tipoVehiculo = CARRO_GOLF.getKey();
-        this.costo = 18;
+        this.costo = CARRO_GOLF.getValor();
         break;
       default:
         this.tipoVehiculo = INVALIDO.getKey();
@@ -52,4 +38,20 @@ public class Vehiculo {
         break;
     }
   }
+
+  //Setter and Getters
+  public int getCosto() {
+    return costo;
+  }
+  public String getTipoVehiculo() {
+    return tipoVehiculo;
+  }
+  public int getTiempoRenta() {
+    return tiempoRenta;
+  }
+  public int getCantidadVehiculos() {
+    return cantidadVehiculos;
+  }
+
+
 }
