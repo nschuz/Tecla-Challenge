@@ -6,7 +6,7 @@
 Se solicita el procesamiento de todos los datos poseídos e informar:
 
 - Indicar para cada ciudad la recaudación por cada tipo de vehículo.
-- Nro. de ciudad con menor facturación total.
+- Numero de ciudad con menor facturación total.
 - Porcentaje de cada ciudad en la facturación total.
 - Ordenar de forma creciente por recaudación total.
 
@@ -19,3 +19,4 @@ Se solicita el procesamiento de todos los datos poseídos e informar:
    ![](https://proyectocifrado.com/imagenes/imagen2)
 3. Seleccionamos cualquier numero par visualizar los datos
    ![](https://proyectocifrado.com/imagenes/imagen3)
+   
