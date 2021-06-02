@@ -1,3 +1,17 @@
+# Challenge 1 Tecla Academy
+## Regis Valero Jorge Jesus
+
+
+
+Challenge relaizado en Java para evitar posibles errores este reto
+fue realizo con la version Java 8
+
+
+
+## Requisitos
+Cada vez que se realiza un alquiler se registran los siguientes datos
+
+- Número de Ciudad
 - Tipo de Vehículo
 - Cantidad de vehiculos alquilados
 - Total de horas de alquiler
