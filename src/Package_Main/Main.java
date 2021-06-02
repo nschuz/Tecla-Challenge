@@ -22,12 +22,12 @@ public class Main {
     Scanner entrada = new Scanner(System.in);
     int opcion;
     do {
-      System.out.println("¿Que deseas hacer?\n");
+      System.out.println("¿Insertar un numero valido para iniciar?\n");
       System.out.println("1. Alquilar un vehículo");
       System.out.println("2. Indicar para cada ciudad la recaudación por cada tipo de vehículo");
-      System.out.println("3. Nro. De ciudad con menor facturación total");
-      System.out.println("4. Porcentaje de cada ciudad en la facturación total");
-      System.out.println("5. Ordenar de forma creciente por recaudación total");
+      System.out.println("3. Numero de ciudad con menor facturación total");
+      System.out.println("4. Porcentaje de cada ciudad con la facturación total");
+      System.out.println("5. Ordenar de forma creciente por  la recaudación total");
       System.out.println("6. Salir");
       opcion = entrada.nextInt();
       switch (opcion) {
